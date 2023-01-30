@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'dpg/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'dpg/css/responsive.css' %}">
+    <link rel="stylesheet" href="{% static 'dpg/css/utils.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index">DPGLibrary</a>
+            </div>
+            <ul class="v-resp">
+                <li><a href="index">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">CONTACT US</a></li>
+            </ul>
+            <div class="burger-menu">
+                <div class="lines"></div>
+                <div class="lines"></div>
+                <div class="lines"></div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="cont-form">
+            <h1 class="cont-head">
+                CONTACT FOR ANY QUERY
+            </h1>
+            <form action="/" class="contactform" method="post">{% csrf_token %}
+                <div class="form-floating">
+                    <input type="text" placeholder="Enter Your Name" name="name" class="form-control">
+                </div>
+                <div class="form-floating">
+                    <input type="email" placeholder="Enter Your Email" name="email" class="form-control">
+                </div>
+                <div class="form-floating">
+                    <input type="tel" placeholder="Enter Your Phone Number" name="phone_number" class="form-control">
+                </div>
+                <div class="form-floating">
+                    <textarea placeholder="Enter Your Message Here!!!" name="message" id="message" cols="30" rows="10" class="form-control"></textarea>
+                </div>
+                <div class="form-floating">
+                    <button class="btn" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer class="flex-all-center">
+        <p>Copyright &copy; DPGLibrary 2023</p>
+    </footer>
+    <script src="/static/javascript/jav.js"></script>
+    <script src="/static/javascript/jquery.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+@media screen and (max-width: 1024px) {
+    .right-container {
+        display: none;
+    }
+
+    .left-container {
+        width: 100%;
+        text-align: center;
+        padding: 52px 79px;
+    }
+
+    .list-prog li {
+        padding: 25px 8px;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    nav {
+        flex-direction: column;
+        justify-content: flex-start;
+        /* height: 13.5vh; */
+    }
+
+    .list-prog ul li {
+        margin: 15px 15px;
+        padding: 15px 0;
+    }
+
+    .list-prog ul li a {
+        font-size: 15px;
+    }
+
+    .list-prog ul li a {
+        position: none;
+    }
+
+    .program-container {
+        margin: 0 4.8vh;
+    }
+
+    .left-container {
+        padding: 0px 60px;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .info-message {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .message-box {
+        margin-top: 20px;
+        width: 60vw;
+        font-size: 13px;
+    }
+
+    .message-image img {
+        width: 80vw;
+    }
+}
+
+@media screen and (max-width:530px) {
+    nav {
+        flex-direction: column;
+        transition: all 0.7s ease-out;
+    }
+
+    .logo {
+        padding: 0;
+    }
+
+    nav ul {
+        padding: 18px 0px;
+        flex-direction: column;
+    }
+
+    nav ul li {
+        padding: 7px 23px;
+    }
+
+    .v-resp {
+        opacity: 0;
+    }
+
+    .burger-menu {
+        display: block;
+        position: absolute;
+        top: 12px;
+        right: 5px;
+        cursor: pointer;
+    }
+
+    .lines {
+        width: 23px;
+        background-color: white;
+        height: 3px;
+        margin: 3px 20px;
+    }
+}
+
+@media screen and (max-width: 445px) {
+    .left-container {
+        padding: 0;
+    }
+
+}
+
+@media screen and (max-width: 956px) {
+    .contant {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .sub-container {
+        margin: 12px 0;
+    }
+
+    .cont-image img {
+        width: 75vw;
+    }
+
+    .cont-text {
+        width: 72vw;
+    }
+}

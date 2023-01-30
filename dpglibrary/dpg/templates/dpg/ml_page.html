@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'dpg/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'dpg/css/responsive.css' %}">
+    <link rel="stylesheet" href="{% static 'dpg/css/utils.css' %}">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <title>Document</title>
+    <style>
+        main {
+            display: flex;
+        }
+
+        .table-container {
+            /* border: 2px solid red; */
+            width: calc(13.57vw + 55vw);
+        }
+
+        .table-header {
+            /* border: 2px solid black; */
+            display: inline-flex;
+            /* padding: 12px; */
+            margin-top: 10px;
+        }
+
+        .table-body {
+            /* border: 2px solid green; */
+            display: flex;
+            /* border: 2px solid black; */
+            margin-top: 10px;
+        }
+
+        .inline {
+            display: inline;
+            /* border: 2px solid green; */
+            border-radius: 15px;
+            padding: 7px;
+            box-shadow: 0 0 25px rgb(220 219 219);
+            font-family: 'Kanit', sans-serif;
+            font-size: 1.5vw;
+            margin-left: 6px;
+            text-align: center;
+        }
+
+        .serial-no {
+            width: 9vw;
+        }
+
+        .title {
+            width: 57vw;
+        }
+
+        .serial-body {
+            width: 9vw;
+        }
+
+        .title-body {
+            width: 57vw;
+            cursor: pointer;
+        }
+
+        .title-body :hover{
+            font-weight: bolder;
+        }
+        .slide-poster {
+            width: 100%;
+            /* border: 2px solid red; */
+            /* height: 100vh; */
+        }
+
+        .slide-container {
+            /* border: 2px solid black; */
+            /* height: 50%; */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .image-slide {
+            /* border: 2px solid yellow; */
+            width: 90%;
+            margin: auto;
+        }
+
+        .image-slide img {
+            width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        .btn-start {
+            /* border: 2px solid green; */
+            width: 90%;
+            margin: auto;
+            margin-top: 25px;
+        }
+
+        .btn {
+            border: none;
+            cursor: pointer;
+        }
+
+        .bx-sd {
+            box-shadow: 0 0 25px rgb(220, 219, 219);
+            text-decoration: none;
+        }
+
+        .btn a {
+            text-decoration: none;
+            color: rgb(135, 206, 235);
+            font-weight: bold;
+            transition: all 0.5s;
+        }
+
+        .btn a :hover {
+            box-shadow: 0 0 30px rgb(168, 168, 168);
+        }
+
+        .desc-contant {
+            border: 2px solid green;
+            width: 90%;
+            margin: auto;
+            margin-top: 15px;
+        }
+        .hide-cont{
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="/index.html">DPGLibrary</a>
+            </div>
+            <ul class="v-resp">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">CONTACT US</a></li>
+            </ul>
+            <div class="burger-menu">
+                <div class="lines"></div>
+                <div class="lines"></div>
+                <div class="lines"></div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="table-container">
+            <div class="table-header">
+                <div class="serial-no inline">S. No</div>
+                <div class="title inline">Title</div>
+            </div>
+            {% for i in ml %}
+            <div class="table-body">
+                <div id="body_js" class="serial-body inline">{{i.ml_sno}}</div>
+                <div class="title-body inline"><p class="click-ac">{{i.ml_title}}</p></div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="slide-poster">
+            <div class="slide-container">
+                <div class="image-slide">
+                    <img src="{% static 'dpg/assets/Introduction.png' %}" alt="ThumbNail">
+                </div>
+                <div class="btn-start">
+                    <button class="btn inline bx-sd"><a href="#">Watch Now</a></button>
+                    <button class="btn inline bx-sd"><a href="#">Share</a></button>
+                </div>
+            </div>
+            <div class="desc-contant">
+                <h2>Description</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ipsa perferendis nemo doloribus
+                    voluptas? Pariatur nulla eaque ullam, molestiae beatae consequatur animi vel quisquam? Ab asperiores
+                    incidunt quibusdam distinctio doloremque eaque modi iure cumque voluptatum excepturi quis aliquam
+                    eius, labore aliquid tempora atque ipsam necessitatibus minus explicabo assumenda minima. Alias
+                    libero quia debitis reiciendis consequatur ipsam earum dolores dolorum voluptatum aliquam magnam
+                    pariatur cupiditate, necessitatibus unde iste tempore accusamus doloremque. Et, facere dolorem,
+                    officia recusandae dolor numquam quas id corporis quia sequi inventore sit provident eligendi
+                    corrupti velit reprehenderit. Veniam similique repellat perferendis mollitia placeat dolorum,
+                    laudantium aliquam accusamus unde deserunt minus aut beatae nulla, ipsa saepe, doloremque velit
+                    molestias autem nisi rerum earum! Incidunt culpa ex autem. Corrupti quidem unde dolores debitis a
+                    impedit amet saepe tempore odio, tempora pariatur laudantium maxime tenetur non! Voluptatibus
+                    adipisci eius minima quia voluptatum accusamus dicta eveniet facere! Nobis doloremque itaque
+                    laudantium sit mollitia nihil natus adipisci possimus molestiae, alias minus consectetur fugit quis
+                    nesciunt vitae aliquid. Reiciendis nihil iusto deleniti deserunt earum libero nulla maxime animi id
+                    mollitia facere inventore ipsum, voluptatum dignissimos saepe eveniet quod omnis asperiores?
+                    Obcaecati rerum, cumque, voluptas consequuntur at ea necessitatibus dolores consequatur eaque
+                    libero, aperiam rem?</p>
+            </div>
+        </div>
+        <div class="slide-poster hide-cont">
+            <div class="slide-container">
+                <div class="image-slide">
+                    <img src="{% static 'dpg/assets/Introduction.png' %}" alt="ThumbNail">
+                </div>
+                <div class="btn-start">
+                    <button class="btn inline bx-sd"><a href="#">Watch Now</a></button>
+                    <button class="btn inline bx-sd"><a href="#">Share</a></button>
+                </div>
+            </div>
+            <div class="desc-contant">
+                <h2>Description</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ipsa perferendis nemo doloribus
+                    voluptas? Pariatur nulla eaque ullam, molestiae beatae consequatur animi vel quisquam? Ab asperiores
+                    incidunt quibusdam distinctio doloremque eaque modi iure cumque voluptatum excepturi quis aliquam
+                    eius, labore aliquid tempora atque ipsam necessitatibus minus explicabo assumenda minima. Alias
+                    libero quia debitis reiciendis consequatur ipsam earum dolores dolorum voluptatum aliquam magnam
+                    pariatur cupiditate, necessitatibus unde iste tempore accusamus doloremque. Et, facere dolorem,
+                    officia recusandae dolor numquam quas id corporis quia sequi inventore sit provident eligendi
+                    corrupti velit reprehenderit. Veniam similique repellat perferendis mollitia placeat dolorum,
+                    laudantium aliquam accusamus unde deserunt minus aut beatae nulla, ipsa saepe, doloremque velit
+                    molestias autem nisi rerum earum! Incidunt culpa ex autem. Corrupti quidem unde dolores debitis a
+                    impedit amet saepe tempore odio, tempora pariatur laudantium maxime tenetur non! Voluptatibus
+                    adipisci eius minima quia voluptatum accusamus dicta eveniet facere! Nobis doloremque itaque
+                    laudantium sit mollitia nihil natus adipisci possimus molestiae, alias minus consectetur fugit quis
+                    nesciunt vitae aliquid. Reiciendis nihil iusto deleniti deserunt earum libero nulla maxime animi id
+                    mollitia facere inventore ipsum, voluptatum dignissimos saepe eveniet quod omnis asperiores?
+                    Obcaecati rerum, cumque, voluptas consequuntur at ea necessitatibus dolores consequatur eaque
+                    libero, aperiam rem?</p>
+            </div>
+        </div>
+
+    </main>
+    <footer class="flex-all-center">
+        <p>Copyright &copy; DPGLibrary 2023</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="{% static 'dpg/javascript/jquery-3.6.3.js' %}"></script>
+    <script type="text/javascript" src="{% static 'dpg/javascript/jquery.js' %}"></script>
+    <script type="text/javascript" src="{% static 'dpg/javascript/jav.js' %}"></script>
+    <script>
+        $('.click-ac').click(function () {
+            console.log("Clicked!!!");
+            
+        });
+    </script>
+</body>
+
+
+</html>

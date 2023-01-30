@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'dpg/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'dpg/css/responsive.css' %}">
+    <link rel="stylesheet" href="{% static 'dpg/css/utils.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index">DPGLibrary</a>
+            </div>
+            <ul class="v-resp">
+                <li><a href="#">HOME</a></li>
+                <li><a href="about">ABOUT</a></li>
+                <li><a href="contact">CONTACT US</a></li>
+            </ul>
+            <div class="burger-menu">
+                <div class="lines"></div>
+                <div class="lines"></div>
+                <div class="lines"></div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="subcont">
+                <div class="left-container">
+                    <div>
+                        <h2 class="style-head">
+                            Welcome to
+                            <span>DPGLibrary</span>
+                        </h2>
+                        <div class="animated-heading">
+                            <h1>Learn <span id="words">Python</span></h1>
+                        </div>
+                        <p class="style-para">Confused on which course to take? I have got you covered. Browse courses
+                            and
+                            find out the best
+                            course for you. Its free! Code With Harry is my attempt to teach basics and those coding
+                            techniques to people in short time which took me ages to learn.
+                        </p>
+                    </div>
+                </div>
+                <div class="right-container">
+                    <img src="{% static 'dpg/assets/dpgitm.jpg' %}" alt="DPGITM" width="800px">
+                </div>
+            </div>
+            <div class="program-container">
+                <div class="prog-head">
+                    Our Program
+                </div>
+                <div class="list-prog">
+                    <ul>
+                        <li><a href="#">Python</a></li>
+                        <li><a href="#">Data Structure</a></li>
+                        <li><a href="#">C/C++</a></li>
+                        <li><a href="#">Ruby</a></li>
+                        <li><a href="ml">Machine Learning</a></li>
+                        <li><a href="#">Project</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="messages">
+                <div class="info-message">
+                    <div class="message-box">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit hic magni praesentium vero
+                        numquam
+                        commodi harum quae non doloremque? Dolores praesentium dolorum totam non cumque quod amet.
+                        Vel
+                        facere ipsa rem! Perferendis ut esse suscipit eveniet quae, possimus, sunt labore repellat
+                        obcaecati, officia in! Amet accusantium nesciunt deserunt unde id.
+                    </div>
+                    <div class="message-image">
+                        <img src="https://source.unsplash.com/780x400/?computer,apple" alt="Unsplash Images">
+                    </div>
+                </div>
+                <div class="info-message display-reverse">
+                    <div class="message-box">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit hic magni praesentium vero
+                        numquam
+                        commodi harum quae non doloremque? Dolores praesentium dolorum totam non cumque quod amet.
+                        Vel
+                        facere ipsa rem! Perferendis ut esse suscipit eveniet quae, possimus, sunt labore repellat
+                        obcaecati, officia in! Amet accusantium nesciunt deserunt unde id.
+                    </div>
+                    <div class="message-image">
+                        <img src="https://source.unsplash.com/780x400/?coding, nature" alt="Unsplash Images">
+                    </div>
+                </div>
+                <div class="info-message">
+                    <div class="message-box">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit hic magni praesentium vero
+                        numquam
+                        commodi harum quae non doloremque? Dolores praesentium dolorum totam non cumque quod amet.
+                        Vel
+                        facere ipsa rem! Perferendis ut esse suscipit eveniet quae, possimus, sunt labore repellat
+                        obcaecati, officia in! Amet accusantium nesciunt deserunt unde id.
+                    </div>
+                    <div class="message-image">
+                        <img src="https://source.unsplash.com/780x400/?python, javascript" alt="Unsplash Images">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="flex-all-center">
+        <p>Copyright &copy; DPGLibrary 2023</p>
+    </footer>
+    <script src="{% static 'dpg/javascript/jav.js' %}"></script>
+    <script src="{% static 'dpg/javascript/jquery.js' %}"></script>
+</body>
+
+</html>
